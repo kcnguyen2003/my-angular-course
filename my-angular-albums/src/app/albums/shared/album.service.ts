@@ -20,4 +20,12 @@ export class AlbumService {
     return this.http.get<Album>(this.url + "/" + id);
   }
 
+  addAlbum(album: Album): Observable<Album> {
+    return this.http.post<Album>(this.url, album);
+  }
+
+  removeAlbum(id: number): Observable<Album> {
+    return this.http.delete<Album>(this.url + "/" + id);
+  }
+
 }

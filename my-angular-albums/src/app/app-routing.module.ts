@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
+import { AddAlbumComponent } from './albums/add-album/add-album.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/about", pathMatch: "full" },
@@ -14,6 +15,7 @@ const routes: Routes = [
                             return mod.AlbumsModule;
                             })},
   { path: "albums/:id", component: AlbumDetailsComponent },
+  { path: "add-album", component: AddAlbumComponent },
   { path: "**", component: NotfoundComponent, pathMatch: "full" }
 ];
 
